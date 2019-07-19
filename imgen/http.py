@@ -198,6 +198,8 @@ class _SyncEndpoint:
             r = make_get_request('%s/api/%s' % (self.BASE, self.name),
                                  headers=self.headers,
                                  params=params)
+            if not self._global_over:
+                continue
 
             if r.status_code == 429:
                 retry_after = int(r.headers['retry-after']) / 1000
@@ -232,8 +234,8 @@ class _SyncEndpoint:
             raise HTTPError(result)
 
     def get_as_discord(self, **kwargs):
-        r = self.get(**kwargs)
-        return File(filename=self.name + '.png', fp=r)
+        r, ext = self.get(**kwargs)
+        return File(filename=self.name + '.%s' % ext, fp=r)
 
     def save(self, filename=None, **kwargs):
         if not filename:
