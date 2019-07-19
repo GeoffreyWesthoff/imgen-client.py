@@ -70,3 +70,6 @@ f = sync_client.magik.get_as_discord(avatar1='urltoimage')
 ## Documentation
 Coming Soon
 
+## Special Thanks
+
+Rapptz for writing a ratelimit bucket system that has greatly inspired the system used here!
