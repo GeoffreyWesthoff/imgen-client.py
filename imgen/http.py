@@ -58,19 +58,19 @@ class _AsyncEndpoint:
             if not a1:
                 raise MissingParameterError('avatar1')
         if 'avatar1' in self.params:
-            a2 = kwargs.pop('avatar2', None)
+            a2 = kwargs.pop('avatar2', '')
             if not a2:
                 raise MissingParameterError('avatar2')
         if 'username0' in self.params:
-            u1 = kwargs.pop('username1', None)
+            u1 = kwargs.pop('username1', '')
             if not u1:
                 raise MissingParameterError('username1')
         if 'username1' in self.params:
-            u2 = kwargs.pop('username2', None)
+            u2 = kwargs.pop('username2', '')
             if not u2:
                 raise MissingParameterError('username2')
         if 'text' in self.params:
-            text = kwargs.pop('text', None)
+            text = kwargs.pop('text', '')
             if not text:
                 raise MissingParameterError('text')
 
