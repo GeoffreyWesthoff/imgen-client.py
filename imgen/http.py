@@ -255,7 +255,7 @@ class SyncClient:
     Bear in mind also, that only the async client supports ratelimit buckets.
     If you are using the synchronous client, you must ensure your users do not cause a ratelimit
     """
-    def __init__(self, base=None, token=None):
+    def __init__(self, token=None, base=None):
         self.BASE = base or BASE
         self.token = token
 
@@ -281,7 +281,7 @@ class SyncClient:
 
 
 class AsyncClient:
-    def __init__(self, base=None, token=None, session=None, loop=None):
+    def __init__(self, token=None, base=None,  session=None, loop=None):
         self.BASE = base or BASE
         self.token = token
         if not token:
