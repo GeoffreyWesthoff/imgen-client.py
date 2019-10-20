@@ -4,9 +4,7 @@ A python wrapper for Dank Memer's Image Generation API (Imgen)
 
 ## Installation
 
-This version of imgen-client.py is currently not in a consumer ready state. 
-
-There is currently no documentation on the installation or usage process.
+`pip install imgen-client.py`
 
 #### YOU ARE ON YOUR OWN FOR NOW
 
@@ -68,7 +66,7 @@ f = sync_client.magik.get_as_discord(avatar1='urltoimage')
 ```
 
 ## Documentation
-Coming Soon
+Visit https://imgen-client.readthedocs.io
 
 ## Special Thanks
 
